@@ -10,6 +10,9 @@ public class Animal implements Comparable<Animal>{
     private String sound;
     private boolean vegitarian;
 
+    enum SortOrder{FORWARD, REVERSE}
+    public static SortOrder sortOrder = SortOrder.FORWARD;
+
     //Constructor with parameters
     public Animal(String type, String color, int legs, double size, String sound, boolean vegitarian) {
         super();
@@ -135,6 +138,9 @@ public class Animal implements Comparable<Animal>{
         if(result == 0){
             //if the sounds are the same, compare the colors
             result = color.compareTo(other.getColor());
+        }
+        if(sortOrder == SortOrder.REVERSE){
+            result = -result;
         }
         return result;
     }
