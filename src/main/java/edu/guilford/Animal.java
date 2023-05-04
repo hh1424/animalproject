@@ -121,7 +121,7 @@ public class Animal implements Comparable<Animal>{
         for(int i = 0; i < animals.length - 1; i++){
             int minIndex = i;
             for(int j = i + 1; j < animals.length; j++){
-                if(animals[j].getColor().compareTo(animals[minIndex].getColor()) < 0){
+                if(animals[j].compareTo(animals[minIndex]) < 0){
                     minIndex = j;
                 }
             }
@@ -130,23 +130,6 @@ public class Animal implements Comparable<Animal>{
             animals[minIndex] = temp;
         }
     }
-
-    //Create a static selectionSort method that sorts an array of snakes, cheetas, and crabs
-    //based on the color of the animal
-    // public static void selectionSort(Animal[] animals, String type){
-    //     for(int i = 0; i < animals.length - 1; i++){
-    //         int minIndex = i;
-    //         for(int j = i + 1; j < animals.length; j++){
-    //             if(animals[j].getColor().compareTo(animals[minIndex].getColor()) < 0){
-    //                 minIndex = j;
-    //             }
-    //         }
-    //         Animal temp = animals[i];
-    //         animals[i] = animals[minIndex];
-    //         animals[minIndex] = temp;
-    //     }
-    // }
-
 
     //Implement compareTo method that compares the sound of two animlas
     @Override
