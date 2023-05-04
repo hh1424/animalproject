@@ -38,8 +38,8 @@ public class Animal implements Comparable<Animal>{
         this.color = colors[randomIndex];
         //Choose a random leg count from 0 to 10
         this.legs = (int)(Math.random() * 11);
-        //Choose a random size from 0 to 10
-        this.size = Math.random() * 11;
+        //Choose a random size from 0 to 300
+        this.size = Math.random() * 301;
         //Choose a random sound from a list of 10 positibilites
         String[] sounds = {"meow", "woof", "moo", "oink", "quack", 
         "neigh", "baa", "hee-haw", "cluck", "roar"};
@@ -130,6 +130,23 @@ public class Animal implements Comparable<Animal>{
             animals[minIndex] = temp;
         }
     }
+
+    //Create a static selectionSort method that sorts an array of snakes, cheetas, and crabs
+    //based on the color of the animal
+    // public static void selectionSort(Animal[] animals, String type){
+    //     for(int i = 0; i < animals.length - 1; i++){
+    //         int minIndex = i;
+    //         for(int j = i + 1; j < animals.length; j++){
+    //             if(animals[j].getColor().compareTo(animals[minIndex].getColor()) < 0){
+    //                 minIndex = j;
+    //             }
+    //         }
+    //         Animal temp = animals[i];
+    //         animals[i] = animals[minIndex];
+    //         animals[minIndex] = temp;
+    //     }
+    // }
+
 
     //Implement compareTo method that compares the sound of two animlas
     @Override

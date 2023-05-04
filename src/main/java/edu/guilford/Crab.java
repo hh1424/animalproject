@@ -8,7 +8,13 @@ public class Crab extends Animal {
 
     //Constructor with parameters
     public Crab() {
-        super("crab", "red", 8, 2.5, "click", true);
+        // super("crab", "red", 8, 2.5, "click", true);
+    }
+
+    //override the color method
+    @Override
+    public String getColor() {
+        return "red";
     }
 
     //implement the compareTo method

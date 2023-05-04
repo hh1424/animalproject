@@ -9,7 +9,13 @@ public class Cheeta extends Animal{
 
     //Constructor with parameters
     public Cheeta() {
-        super("cheeta", "yellow", 4, 2.5, "meow", true);
+        // super("cheeta", "yellow", 4, 2.5, "meow", true);
+    }
+
+    //override the vegitarian method
+    @Override
+    public boolean isVegitarian() {
+        return false;
     }
 
     //implement the compareTo method

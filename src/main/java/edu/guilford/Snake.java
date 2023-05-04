@@ -8,7 +8,13 @@ public class Snake extends Animal{
 
     //Constructor with parameters
     public Snake() {
-        super("snake", "green", 0, 2.5, "hiss", true);
+        // super("snake", "green", 0, 2.5, "hiss", true);
+    }
+
+    //override the sound method
+    @Override
+    public String getSound() {
+        return "hiss";
     }
 
     //implement the compareTo method
